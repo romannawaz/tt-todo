@@ -1,0 +1,22 @@
+.wrapper {
+    min-width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 250px;
+}
+
+.greetings {
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.full-width {
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <form #loginForm [formGroup]="form" (ngSubmit)="login(loginForm)" class="form" *ngIf="!user; else logged">
+        <div class="form-field">
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Login</mat-label>
+                <input matInput type="text" formControlName="login">
+            </mat-form-field>
+        </div>
+
+        <div class="form-field full-width">
+            <mat-form-field appearance="fill" class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+        </div>
+
+        <button mat-flat-button color="primary" class="full-width">Sign In</button>
+    </form>
+
+    <ng-template #logged>
+        <div>
+            <div class="greetings">Hello, {{ user?.login }}!</div>
+            <div>
+                <button mat-flat-button color="accent" class="full-width" (click)="redirectToToDo()">
+                    Go to ToDo list
+                </button>
+            </div>
+        </div>
+    </ng-template>
+</div>
